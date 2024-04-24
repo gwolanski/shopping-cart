@@ -1,3 +1,5 @@
+Techniques used: routing, CSS Modules
+
 Project planning:
 
 components:

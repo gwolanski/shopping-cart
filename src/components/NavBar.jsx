@@ -6,7 +6,7 @@ export default function NavBar() {
         <div className={styles.headerContainer}>
             <h1 className={styles.storeName}>StoreName</h1>
             <div className={styles.navContainer}>
-                <Link to='home'>Home</Link>
+                <Link to='/'>Home</Link>
                 <Link to='catalog'>Catalog</Link>
                 <Link to='shoppingCart'>Shopping Cart</Link>
             </div>
