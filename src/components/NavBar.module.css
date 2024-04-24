@@ -3,6 +3,9 @@
     background-color: rgb(150, 194, 186);
     padding: 1rem;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .contentContainer {
