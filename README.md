@@ -12,3 +12,6 @@ components:
     -shopping cart
         functionality: ability to remove item from cart and customize quantity, running total of items
 
+
+        *include media queries for smaller screens!
+
