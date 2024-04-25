@@ -1,0 +1,22 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.cardImage {
+    height: 200px;
+}
+
+.itemSpecifics {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemName {}
+
+.price {}
+
+.addToCartBtn {
+    width: 150px;
+}
