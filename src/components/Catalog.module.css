@@ -3,4 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
+    padding: 3rem;
+    overflow-y: scroll;
+    height: 70vh;
 }
