@@ -21,7 +21,6 @@ export default function Catalog() {
 
     return (
         <>
-            <div>catalog</div>
             <div className={styles.catalogContainer}>
                 {products.map(product => (
                     <ItemCard key={product.node.id} photoURL={product.node.featuredImage.url} itemName={product.node.title} price={product.node.variants.edges[0].node.price.amount} />
