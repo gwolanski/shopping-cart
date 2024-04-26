@@ -1,6 +1,6 @@
 import styles from './ItemCard.module.css'
 
-export default function ItemCard({ photoURL, itemName, price }) {
+export default function ItemCard({ photoURL, itemName, price, onClick }) {
 
 
     return (
@@ -13,7 +13,7 @@ export default function ItemCard({ photoURL, itemName, price }) {
                 </div>
                 <div className={styles.addtoCartContainer}>
                     <input type="number" name="quantity" id="quantity" min={0} max={10} />
-                    <button className={styles.addToCartBtn}>Add to Cart</button>
+                    <button className={styles.addToCartBtn} onClick={onClick}>Add to Cart</button>
                 </div>
             </div>
         </div>

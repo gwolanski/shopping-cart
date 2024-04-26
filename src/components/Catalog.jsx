@@ -19,11 +19,15 @@ export default function Catalog() {
 
     const products = catalog.data.products.edges;
 
+    function addToCartHandler() {
+        console.log("added")
+    }
+
     return (
         <>
             <div className={styles.catalogContainer}>
                 {products.map(product => (
-                    <ItemCard key={product.node.id} photoURL={product.node.featuredImage.url} itemName={product.node.title} price={product.node.variants.edges[0].node.price.amount} />
+                    <ItemCard key={product.node.id} photoURL={product.node.featuredImage.url} itemName={product.node.title} price={product.node.variants.edges[0].node.price.amount} onClick={addToCartHandler} />
                 ))}
             </div>
         </>
