@@ -2,7 +2,8 @@ import styles from './CartItem.module.css';
 
 export default function CartItem({ photoURL, itemName, unitPrice, quantity, onChange }) {
     const handleQuantityChange = (event) => {
-        onChange(event.target.value);
+        const newQuantity = parseInt(event.target.value)
+        onChange(newQuantity);
     }
 
     return (

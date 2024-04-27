@@ -4,9 +4,19 @@ import CartItem from "./CartItem";
 
 export default function ShoppingCart() {
     const [cartItems, setCartItems] = useOutletContext();
-    function changeQuantity() {
+
+    function changeQuantity(newQuantity, product) {
         //make it so this updates the quantity in cartItems
-        console.log('changed')
+
+        const itemIndex = cartItems.findIndex(item => {
+            console.log('product:', product)
+            return item[0].node.id === product[0].node.id;
+        });
+        if (itemIndex !== -1) {
+            const updatedCartItems = [...cartItems];
+            updatedCartItems[itemIndex][1] = newQuantity;
+            setCartItems(updatedCartItems);
+        }
     }
 
     return (
@@ -19,7 +29,7 @@ export default function ShoppingCart() {
                     itemName={item[0].node.title}
                     unitPrice={item[0].node.variants.edges[0].node.price.amount}
                     quantity={item[1]}
-                    onChange={changeQuantity()}
+                    onChange={(quantity) => changeQuantity(quantity, item)}
                 />
             ))}
         </div>

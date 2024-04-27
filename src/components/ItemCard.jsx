@@ -22,7 +22,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                     <div className={styles.price}>{price}</div>
                 </div>
                 <div className={styles.addtoCartContainer}>
-                    <input type="number" name="quantity" id="quantity" onChange={handleQuantityChange} min={0} max={99} />
+                    <input type="number" name="quantity" id="quantity" onChange={handleQuantityChange} value={0} min={0} max={99} />
                     <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
