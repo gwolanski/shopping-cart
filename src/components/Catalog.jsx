@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import styles from "./Catalog.module.css";
 import ShoppingCart from "./ShoppingCart";
+import { useOutletContext } from "react-router-dom";
 
 export default function Catalog() {
     const [catalog, setCatalog] = useState(null);
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useOutletContext();
 
     useEffect(() => {
         console.log(cartItems)
@@ -28,6 +29,7 @@ export default function Catalog() {
     function handleAddToCart(newItem, newQuantity) {
         if (newQuantity > 0) {
             const existingItemIndex = cartItems.findIndex(item => {
+                console.log('item: ', item)
                 return item[0].node.id === newItem.node.id;
             });
             if (existingItemIndex !== -1) {

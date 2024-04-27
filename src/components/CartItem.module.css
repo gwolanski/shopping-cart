@@ -1,0 +1,24 @@
+.cartItemContainer {
+    width: 500px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.itemImage {
+    width: 200px;
+    height: 200px;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quantityInput {
+    height: 30px;
+    width: 50px;
+}
