@@ -1,17 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import { Outlet } from 'react-router-dom'
 
 const App = () => {
-  const [itemNumber, setItemNumber] = useState(0);
-  //i need to lift the state up so that all component can access cartItems. need to figure out how to get that to work using Outlet
+  const [totalQuantity, setTotalQuantity] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    let newQuantity = 0;
+    cartItems.forEach(item => {
+      newQuantity += item[1];
+      setTotalQuantity(newQuantity);
+    })
+  }, [cartItems])
 
   return (
     <>
-      <NavBar itemNumber={itemNumber} />
+      <NavBar totalQuantity={totalQuantity} />
       <div className="contentContainer">
         <Outlet context={[cartItems, setCartItems]} />
       </div>

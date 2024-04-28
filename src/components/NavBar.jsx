@@ -4,7 +4,7 @@ import shoppingCartIcon from "../assets/shoppingcart.png";
 import homeIcon from "../assets/home.png";
 import catalogIcon from "../assets/catalog.png"
 
-export default function NavBar({ itemNumber }) {
+export default function NavBar({ totalQuantity }) {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.contentContainer}>
@@ -18,7 +18,7 @@ export default function NavBar({ itemNumber }) {
                     </Link>
                     <Link to='shoppingCart'>
                         <img className={styles.navIcon} src={shoppingCartIcon} alt="shopping cart" />
-                        <div className={styles.itemNumber}>{itemNumber}</div>
+                        <div className={styles.itemNumber}>{totalQuantity}</div>
                     </Link>
                 </div>
             </div>
