@@ -7,8 +7,6 @@ export default function ShoppingCart() {
     const [cartItems, setCartItems] = useOutletContext();
 
     function changeQuantity(newQuantity, product) {
-        //make it so this updates the quantity in cartItems
-
         const itemIndex = cartItems.findIndex(item => {
             console.log('product:', product)
             return item[0].node.id === product[0].node.id;
@@ -40,6 +38,7 @@ export default function ShoppingCart() {
                     onChange={(quantity) => changeQuantity(quantity, item)}
                 />
             ))}
+            <div className={styles.total}>Total: $</div>
         </div>
     )
 }

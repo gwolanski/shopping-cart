@@ -10,12 +10,15 @@ export default function CartItem({ photoURL, itemName, unitPrice, quantity, onCh
         <div>
             <div className={styles.cartItemContainer}>
                 <img src={photoURL} alt={itemName} className={styles.itemImage} />
-                <div className={styles.itemDetails}>
-                    <div className="">{itemName}</div>
-                    <div className="">${unitPrice} unit price</div>
+                <div className={styles.itemDetailsContainer}>
+                    <div className={styles.itemDetails}>
+                        <div className={styles.name}>{itemName}</div>
+                        <div className={styles.price}>${unitPrice} unit price</div>
+                    </div>
+                    <input className={styles.quantityInput} type="number" name={itemName} id={itemName} value={quantity} onChange={handleQuantityChange} max={99} />
+                    <div className={styles.subtotal}>Subtotal: ${unitPrice * quantity}</div>
+                    <button className={styles.deleteBtn}>X</button>
                 </div>
-                <input className={styles.quantityInput} type="number" name={itemName} id={itemName} value={quantity} onChange={handleQuantityChange} max={99} />
-                <div>Subtotal: ({unitPrice}*{quantity})</div>
             </div>
         </div>
     )

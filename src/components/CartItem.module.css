@@ -1,6 +1,6 @@
 .cartItemContainer {
     width: 500px;
-    height: 250px;
+    height: 150px;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -8,17 +8,48 @@
 }
 
 .itemImage {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.itemDetailsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 300px;
 }
 
 .itemDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    grid-row: 2;
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .quantityInput {
     height: 30px;
     width: 50px;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.deleteBtn {
+    height: 20px;
+    width: 30px;
+    grid-row: 1;
+    grid-column: 2;
+
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.subtotal {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
