@@ -1,0 +1,9 @@
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.heading {
+    font-size: 2rem;
+}

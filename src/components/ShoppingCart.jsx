@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import CartItem from "./CartItem";
+import styles from "../components/ShoppingCart.module.css"
 
 export default function ShoppingCart() {
     const [cartItems, setCartItems] = useOutletContext();
@@ -19,9 +20,16 @@ export default function ShoppingCart() {
         }
     }
 
+    function checkForEmptyCart() {
+        if (cartItems.length === 0) {
+            return <div>Your shopping cart is empty.</div>
+        }
+    }
+
     return (
-        <div>
-            <h2>Shopping Cart</h2>
+        <div className={styles.cartContainer}>
+            <h2 className={styles.heading}>Shopping Cart</h2>
+            {checkForEmptyCart()}
             {cartItems.map(item => (
                 <CartItem
                     key={item[0].node.id}

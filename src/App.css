@@ -1,5 +1,21 @@
 #root {
   /* max-width: 1280px; */
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.navContainer {
+  height: 150px;
+}
+
+.contentContainer {
+  flex: 1;
+  /* overflow-y: scroll; */
+}
+
+.footerContainer {
+  height: 50px;
 }

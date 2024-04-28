@@ -18,11 +18,16 @@ const App = () => {
 
   return (
     <>
-      <NavBar totalQuantity={totalQuantity} />
+      <div className="navContainer">
+        <NavBar totalQuantity={totalQuantity} />
+      </div>
       <div className="contentContainer">
         <Outlet context={[cartItems, setCartItems]} />
       </div>
-      <Footer />
+      <div className="footerContainer">
+        <Footer />
+      </div>
+
     </>
   )
 }
