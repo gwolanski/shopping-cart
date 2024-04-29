@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import CartItem from "./CartItem";
 import styles from "../components/ShoppingCart.module.css"
 
 export default function ShoppingCart() {
     const [cartItems, setCartItems] = useOutletContext();
+    const [grandTotal, setGrandTotal] = useState(0);
+
+    useEffect(() => {
+        let currentTotal = 0;
+        cartItems.forEach(item => {
+            const itemTotal = item[1] * parseInt(item[0].node.variants.edges[0].node.price.amount);
+            currentTotal += itemTotal;
+        });
+        setGrandTotal(currentTotal);
+    }, [cartItems])
 
     function changeQuantity(newQuantity, product) {
         const itemIndex = cartItems.findIndex(item => {
@@ -47,7 +57,7 @@ export default function ShoppingCart() {
                     onClick={(itemName) => deleteItem(itemName)}
                 />
             ))}
-            <div className={styles.total}>Total: $</div>
+            <div className={styles.total}>Total: ${grandTotal}</div>
         </div>
     )
 }
