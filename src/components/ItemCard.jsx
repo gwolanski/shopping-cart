@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './ItemCard.module.css'
 
 export default function ItemCard({ photoURL, itemName, price, onClick }) {
     const [quantity, setQuantity] = useState(0);
+    const quantityInputRef = useRef(null);
 
     const handleQuantityChange = (event) => {
         const newQuantity = parseInt(event.target.value);
@@ -11,6 +12,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
 
     const handleAddToCart = () => {
         onClick(quantity);
+        quantityInputRef.current.value = 0;
     }
 
     return (
@@ -22,7 +24,15 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                     <div className={styles.price}>{price}</div>
                 </div>
                 <div className={styles.addtoCartContainer}>
-                    <input type="number" name="quantity" id="quantity" onChange={handleQuantityChange} defaultValue={0} min={0} max={99} />
+                    <input
+                        type="number"
+                        name="quantity"
+                        id="quantity"
+                        onChange={handleQuantityChange}
+                        defaultValue={0}
+                        min={0}
+                        max={99}
+                        ref={quantityInputRef} />
                     <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
