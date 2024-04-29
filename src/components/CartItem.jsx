@@ -1,9 +1,13 @@
 import styles from './CartItem.module.css';
 
-export default function CartItem({ photoURL, itemName, unitPrice, quantity, onChange }) {
+export default function CartItem({ photoURL, itemName, unitPrice, quantity, onChange, onClick }) {
     const handleQuantityChange = (event) => {
         const newQuantity = parseInt(event.target.value)
         onChange(newQuantity);
+    }
+
+    const handleItemDelete = () => {
+        onClick(itemName)
     }
 
     return (
@@ -17,7 +21,7 @@ export default function CartItem({ photoURL, itemName, unitPrice, quantity, onCh
                     </div>
                     <input className={styles.quantityInput} type="number" name={itemName} id={itemName} value={quantity} onChange={handleQuantityChange} max={99} />
                     <div className={styles.subtotal}>Subtotal: ${unitPrice * quantity}</div>
-                    <button className={styles.deleteBtn}>X</button>
+                    <button className={styles.deleteBtn} onClick={handleItemDelete}>X</button>
                 </div>
             </div>
         </div>

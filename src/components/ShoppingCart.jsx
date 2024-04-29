@@ -24,6 +24,14 @@ export default function ShoppingCart() {
         }
     }
 
+    function deleteItem(item) {
+        const itemName = item;
+        const itemIndex = cartItems.findIndex(cartItem => cartItem[0].node.title === itemName);
+        const updatedCartItems = [...cartItems];
+        updatedCartItems.splice(itemIndex, 1);
+        setCartItems(updatedCartItems);
+    }
+
     return (
         <div className={styles.cartContainer}>
             <h2 className={styles.heading}>Shopping Cart</h2>
@@ -36,6 +44,7 @@ export default function ShoppingCart() {
                     unitPrice={Number(item[0].node.variants.edges[0].node.price.amount).toFixed(0)}
                     quantity={item[1]}
                     onChange={(quantity) => changeQuantity(quantity, item)}
+                    onClick={(itemName) => deleteItem(itemName)}
                 />
             ))}
             <div className={styles.total}>Total: $</div>
