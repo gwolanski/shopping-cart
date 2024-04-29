@@ -52,7 +52,7 @@ export default function Catalog() {
                         key={product.node.id}
                         photoURL={product.node.featuredImage.url}
                         itemName={product.node.title}
-                        price={product.node.variants.edges[0].node.price.amount}
+                        price={Number(product.node.variants.edges[0].node.price.amount).toFixed(0)}
                         onClick={(quantity) => handleAddToCart(product, quantity)}
                     />
                 ))}

@@ -33,7 +33,7 @@ export default function ShoppingCart() {
                     key={item[0].node.id}
                     photoURL={item[0].node.featuredImage.url}
                     itemName={item[0].node.title}
-                    unitPrice={item[0].node.variants.edges[0].node.price.amount}
+                    unitPrice={Number(item[0].node.variants.edges[0].node.price.amount).toFixed(0)}
                     quantity={item[1]}
                     onChange={(quantity) => changeQuantity(quantity, item)}
                 />

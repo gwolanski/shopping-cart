@@ -28,7 +28,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
             <div className={styles.bottomCard}>
                 <div className={styles.itemSpecifics}>
                     <div className={styles.item}>{itemName}</div>
-                    <div className={styles.price}>{price}</div>
+                    <div className={styles.price}>${price}</div>
                 </div>
                 <div className={styles.addtoCartContainer}>
                     <input
