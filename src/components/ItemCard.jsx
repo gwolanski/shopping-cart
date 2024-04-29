@@ -3,6 +3,8 @@ import styles from './ItemCard.module.css'
 
 export default function ItemCard({ photoURL, itemName, price, onClick }) {
     const [quantity, setQuantity] = useState(0);
+    const [addedMessage, setAddedMessage] = useState('');
+
     const quantityInputRef = useRef(null);
 
     const handleQuantityChange = (event) => {
@@ -13,6 +15,11 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
     const handleAddToCart = () => {
         onClick(quantity);
         quantityInputRef.current.value = 0;
+
+        setAddedMessage('Added to cart.');
+        setTimeout(() => {
+            setAddedMessage('');
+        }, 3000);
     }
 
     return (
@@ -35,6 +42,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                         ref={quantityInputRef} />
                     <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
+                {addedMessage && <div className={styles.addedMessage}>{addedMessage}</div>}
             </div>
         </div>
     )
