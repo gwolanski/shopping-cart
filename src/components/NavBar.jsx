@@ -1,14 +1,18 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-import shoppingCartIcon from "../assets/shoppingcart.png";
-import homeIcon from "../assets/home.png";
-import catalogIcon from "../assets/catalog.png"
+import shoppingCartIcon from "../assets/shoppingCartG.png";
+import homeIcon from "../assets/homeG.png";
+import catalogIcon from "../assets/catalogG.png";
+import fernIcon from "../assets/fern.png";
 
 export default function NavBar({ totalQuantity }) {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.contentContainer}>
-                <h1 className={styles.storeName}>StoreName</h1>
+                <div className={styles.nameContainer}>
+                    <img src={fernIcon} alt="fern logo" className={styles.logo} />
+                    <h1 className={styles.storeName}>Flo</h1>
+                </div>
                 <div className={styles.navContainer}>
                     <Link to='/'>
                         <img className={styles.navIcon} src={homeIcon} alt="home" />

@@ -1,4 +1,4 @@
-import githubIcon from '../assets/github.svg';
+import githubIcon from '../assets/githubG.png';
 import styles from './Footer.module.css';
 
 export default function Footer() {

@@ -4,15 +4,12 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: rgb(150, 194, 186);
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0; */
+    background-color: black;
 }
 
 .gitLink {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    color: #9DBA93;
 }

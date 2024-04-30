@@ -1,0 +1,51 @@
+.homeContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/foliage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.topPhotosContainer,
+.bottomPhotosContainer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.yogaPic,
+.runnerPic {
+    width: 800px;
+}
+
+.yogaPic,
+.sweatsuitPic {
+    height: 510px;
+}
+
+.sweatsuitPic,
+.sneakersPic {
+    width: 341px;
+}
+
+.slogan {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 10px;
+    position: fixed;
+    top: 605px;
+    left: 230px;
+}
+
+.collectionText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: fixed;
+    top: 685px;
+    left: 725px;
+}
