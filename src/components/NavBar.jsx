@@ -9,9 +9,12 @@ export default function NavBar({ totalQuantity }) {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.contentContainer}>
-                <div className={styles.nameContainer}>
-                    <img src={fernIcon} alt="fern logo" className={styles.logo} />
-                    <h1 className={styles.storeName}>Flo</h1>
+                <div className={styles.leftContainer}>
+                    <div className={styles.nameContainer}>
+                        <img src={fernIcon} alt="fern logo" className={styles.logo} />
+                        <h1 className={styles.storeName}>FLO</h1>
+                    </div>
+                    <div className={styles.slogan}>Activewear designed to fit your lifestyle.</div>
                 </div>
                 <div className={styles.navContainer}>
                     <Link to='/'>

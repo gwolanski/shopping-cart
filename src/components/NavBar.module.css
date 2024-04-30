@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .headerContainer {
     height: 150px;
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: #acbba7;
 }
 
 .contentContainer {
@@ -12,7 +14,14 @@
     justify-content: space-between;
     gap: 100px;
     align-items: center;
-    max-width: 900px;
+    max-width: 1100px;
+    height: 100%;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .nameContainer {
@@ -22,15 +31,27 @@
     gap: 5px;
 }
 
+.logo {
+    height: 50px;
+}
+
+.storeName {
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+}
+
+.slogan {
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-left: 53px;
+}
+
 .navContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 200px;
-}
-
-.logo {
-    height: 50px;
 }
 
 .navIcon {

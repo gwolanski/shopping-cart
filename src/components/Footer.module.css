@@ -3,13 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 70px;
     background-color: black;
 }
 
 .gitLink {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
     color: #9DBA93;
 }
