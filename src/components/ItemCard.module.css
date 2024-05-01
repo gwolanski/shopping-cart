@@ -1,28 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .cardContainer {
     display: flex;
     flex-direction: column;
     width: 200px;
-    border: 1px solid rgb(129, 129, 129);
+    border: 2px solid rgb(53, 53, 53);
     border-radius: 10px;
+    background-color: rgb(181, 181, 181);
 }
 
 .cardImage {
     height: 200px;
     border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid rgb(79, 79, 79);
 }
 
 .bottomCard {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.90rem;
+    height: 90px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgb(181, 181, 181);
+    border-radius: 0 0 10px 10px;
 }
 
 .itemSpecifics {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: 0.5rem;
     justify-content: space-between;
+}
+
+.item {
+    max-width: 120px;
 }
 
 .addtoCartContainer {
@@ -31,10 +45,15 @@
     flex-direction: row;
     justify-content: center;
     gap: 0.5rem;
+    padding-bottom: 5px;
 }
 
-#quantity {}
+#quantity {
+    font-family: 'Poppins', sans-serif;
+}
 
 .addToCartBtn {
-    width: 130px;
+    width: 120px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(216, 239, 216);
 }

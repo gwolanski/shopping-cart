@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 3rem;
     padding: 3rem;
+    background-image: url('../assets/foliage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
