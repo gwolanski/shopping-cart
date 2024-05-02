@@ -30,6 +30,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                     <div className={styles.item}>{itemName}</div>
                     <div className={styles.price}>${price}</div>
                 </div>
+                {addedMessage && <div className={styles.addedMessage}>{addedMessage}</div>}
                 <div className={styles.addtoCartContainer}>
                     <input
                         type="number"
@@ -42,7 +43,6 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                         ref={quantityInputRef} />
                     <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
-                {addedMessage && <div className={styles.addedMessage}>{addedMessage}</div>}
             </div>
         </div>
     )

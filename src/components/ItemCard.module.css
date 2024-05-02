@@ -3,14 +3,14 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 250px;
     border: 2px solid rgb(53, 53, 53);
     border-radius: 10px;
     background-color: rgb(181, 181, 181);
 }
 
 .cardImage {
-    height: 200px;
+    height: 225px;
     border-radius: 10px 10px 0 0;
     border-bottom: 1px solid rgb(79, 79, 79);
 }
@@ -36,11 +36,17 @@
 }
 
 .item {
-    max-width: 120px;
+    max-width: 180px;
+}
+
+.addedMessage {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(37, 37, 37);
 }
 
 .addtoCartContainer {
-    width: 190px;
     display: flex;
     flex-direction: row;
     justify-content: center;

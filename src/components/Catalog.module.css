@@ -1,11 +1,21 @@
 .catalogContainer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    /* gap: 3rem; */
     padding: 3rem;
     background-image: url('../assets/foliage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.663);
+    width: 80%
 }

@@ -30,7 +30,7 @@ export default function ShoppingCart() {
 
     function checkForEmptyCart() {
         if (cartItems.length === 0) {
-            return <div>Your shopping cart is empty.</div>
+            return <div className={styles.emptyCartText}>Your shopping cart is empty.</div>
         }
     }
 
@@ -44,20 +44,23 @@ export default function ShoppingCart() {
 
     return (
         <div className={styles.cartContainer}>
-            <h2 className={styles.heading}>Shopping Cart</h2>
-            {checkForEmptyCart()}
-            {cartItems.map(item => (
-                <CartItem
-                    key={item[0].node.id}
-                    photoURL={item[0].node.featuredImage.url}
-                    itemName={item[0].node.title}
-                    unitPrice={Number(item[0].node.variants.edges[0].node.price.amount).toFixed(0)}
-                    quantity={item[1]}
-                    onChange={(quantity) => changeQuantity(quantity, item)}
-                    onClick={(itemName) => deleteItem(itemName)}
-                />
-            ))}
-            <div className={styles.total}>Total: ${grandTotal}</div>
+            <div className={styles.innerCartContainer}>
+                <h2 className={styles.heading}>Shopping Cart</h2>
+                {checkForEmptyCart()}
+                {cartItems.map(item => (
+                    <CartItem
+                        key={item[0].node.id}
+                        photoURL={item[0].node.featuredImage.url}
+                        itemName={item[0].node.title}
+                        unitPrice={Number(item[0].node.variants.edges[0].node.price.amount).toFixed(0)}
+                        quantity={item[1]}
+                        onChange={(quantity) => changeQuantity(quantity, item)}
+                        onClick={(itemName) => deleteItem(itemName)}
+                    />
+                ))}
+                <div className={styles.total}>Total: ${grandTotal}</div>
+            </div>
+
         </div>
     )
 }

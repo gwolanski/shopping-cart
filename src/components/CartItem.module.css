@@ -1,10 +1,12 @@
 .cartItemContainer {
+    color: black;
     width: 500px;
     height: 150px;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    background-color: rgb(204, 204, 204);
 }
 
 .itemImage {

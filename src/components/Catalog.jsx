@@ -47,15 +47,17 @@ export default function Catalog() {
     return (
         <>
             <div className={styles.catalogContainer}>
-                {products.map(product => (
-                    <ItemCard
-                        key={product.node.id}
-                        photoURL={product.node.featuredImage.url}
-                        itemName={product.node.title}
-                        price={Number(product.node.variants.edges[0].node.price.amount).toFixed(0)}
-                        onClick={(quantity) => handleAddToCart(product, quantity)}
-                    />
-                ))}
+                <div className={styles.innerContainer}>
+                    {products.map(product => (
+                        <ItemCard
+                            key={product.node.id}
+                            photoURL={product.node.featuredImage.url}
+                            itemName={product.node.title}
+                            price={Number(product.node.variants.edges[0].node.price.amount).toFixed(0)}
+                            onClick={(quantity) => handleAddToCart(product, quantity)}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     )
