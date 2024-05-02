@@ -58,6 +58,14 @@
     width: 30px;
 }
 
+.navIcon:hover {
+    width: 32px;
+}
+
+.currentPage {
+    border-bottom: 1px solid white;
+}
+
 .itemNumber {
     font-size: 0.85rem;
     font-weight: bold;
