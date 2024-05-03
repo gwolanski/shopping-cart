@@ -41,12 +41,19 @@
 
 .deleteBtn {
     height: 20px;
-    width: 30px;
+    width: 20px;
     grid-row: 1;
     grid-column: 2;
-
     align-self: flex-start;
     justify-self: flex-end;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    font-weight: bold;
+    color: rgb(86, 60, 32);
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
 }
 
 .subtotal {

@@ -10,11 +10,14 @@ const App = () => {
 
   useEffect(() => {
     let newQuantity = 0;
-    cartItems.forEach(item => {
-      newQuantity += item[1];
-      setTotalQuantity(newQuantity);
-    })
-  }, [cartItems])
+    if (cartItems.length > 0) {
+      cartItems.forEach(item => {
+        newQuantity += item[1];
+      });
+    }
+    setTotalQuantity(newQuantity);
+  });
+
 
   return (
     <>

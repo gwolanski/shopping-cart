@@ -31,6 +31,8 @@
 
 .heading {
     font-size: 2rem;
+    background-color: black;
+    padding: 0.5rem;
 }
 
 .emptyCartText {
@@ -44,4 +46,6 @@
     font-weight: bold;
     padding-top: 10px;
     text-align: end;
+    background-color: black;
+    padding: 0.5rem;
 }
