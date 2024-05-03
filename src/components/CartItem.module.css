@@ -1,7 +1,7 @@
 .cartItemContainer {
     color: black;
-    width: 500px;
-    height: 150px;
+    width: 600px;
+    height: 160px;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -10,17 +10,17 @@
 }
 
 .itemImage {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 }
 
 .itemDetailsContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 0.7fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.5rem;
     padding: 1rem;
-    width: 300px;
+    width: 400px;
 }
 
 .itemDetails {
@@ -28,7 +28,7 @@
 }
 
 .name {
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     font-weight: bold;
 }
 
