@@ -16,10 +16,12 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
         onClick(quantity);
         quantityInputRef.current.value = 0;
 
-        setAddedMessage('Added to cart.');
-        setTimeout(() => {
-            setAddedMessage('');
-        }, 3000);
+        if (quantity > 0) {
+            setAddedMessage('Added to cart.');
+            setTimeout(() => {
+                setAddedMessage('');
+            }, 3000);
+        }
     }
 
     return (
