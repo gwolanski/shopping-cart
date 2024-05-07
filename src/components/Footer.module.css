@@ -14,3 +14,13 @@
     gap: 0.5rem;
     color: #9DBA93;
 }
+
+@media (max-width: 500px) {
+    .gitHubIcon {
+        width: 30px;
+    }
+
+    .gitLink {
+        font-size: 0.8rem;
+    }
+}

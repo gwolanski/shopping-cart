@@ -63,3 +63,13 @@
     font-family: 'Poppins', sans-serif;
     background-color: rgb(216, 239, 216);
 }
+
+@media (max-width: 400px) {
+    .cardContainer {
+        width: 200px;
+    }
+
+    .cardImage {
+        height: 200px;
+    }
+}

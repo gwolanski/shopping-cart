@@ -12,6 +12,14 @@ export default function Home() {
                 <img src={yogaPic} alt="women doing yoga in activewear" className={styles.yogaPic} />
                 <img src={sweatsuitPic} alt="man in sweatsuit" className={styles.sweatsuitPic} />
             </div>
+            <div className={styles.smallViewPhotos}>
+                <img src={yogaPic} alt="women doing yoga in activewear" className={styles.yogaPic} />
+                <div className={styles.narrowPhotos}>
+                    <img src={sweatsuitPic} alt="man in sweatsuit" className={styles.sweatsuitPic} />
+                    <img src={sneakersPic} alt="sneakers" className={styles.sneakersPic} />
+                </div>
+                <img src={runnerPic} alt="man running" className={styles.runnerPic} />
+            </div>
             <div className={styles.collectionTextContainer}>
                 <div className={styles.collectionText}>Check out our current collection
                     <Link to='catalog' className={styles.link}> HERE</Link>

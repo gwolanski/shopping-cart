@@ -1,4 +1,5 @@
 import styles from './CartItem.module.css';
+import PropTypes from 'prop-types';
 
 export default function CartItem({ photoURL, itemName, unitPrice, quantity, onChange, onClick }) {
     const handleQuantityChange = (event) => {
@@ -26,4 +27,13 @@ export default function CartItem({ photoURL, itemName, unitPrice, quantity, onCh
             </div>
         </div>
     )
+}
+
+CartItem.propTypes = {
+    photoURL: PropTypes.string.isRequired,
+    itemName: PropTypes.string.isRequired,
+    unitPrice: PropTypes.string.isRequired,
+    quantity: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired
 }

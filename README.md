@@ -1,17 +1,7 @@
-Techniques used: routing, CSS Modules
+This Shopping Cart app is a React project I completed as part of the Odin Project curriculum. The app functions as a mock shop with three pages: a home page, product catalog, and shopping cart. The project instructions can be found here: https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart#project-solution
 
-Project planning:
+This project allowed me to continue practicing some previously learned concepts such as React hooks, API integration, and responsive web design (media queries), while also giving me an opportunity to put newer concepts to use such as routing, lifting state, props validation, and CSS Modules.
 
-components:
-    -nav bar
-        functionality: navigates to home, product page, and cart.
-        cart should have little number displaying # of items in cart.
-    -item cards
-        functionality: display item details and price, add to cart ability. 
-        if add to cart pressed again, adds another item to cart.
-    -shopping cart
-        functionality: ability to remove item from cart and customize quantity, running total of items
+I really enjoy projects like this where I get to flex my creativity in a relatable scenario while reinforcing many of the concepts I've learned so far throughout my coding journey. 
 
-
-        *include media queries for smaller screens!
-
+Link to page:

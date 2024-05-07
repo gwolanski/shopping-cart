@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import styles from "./Catalog.module.css";
-import ShoppingCart from "./ShoppingCart";
 import { useOutletContext } from "react-router-dom";
 
 export default function Catalog() {
     const [catalog, setCatalog] = useState(null);
     const [cartItems, setCartItems] = useOutletContext();
-
-    useEffect(() => {
-        console.log(cartItems)
-    }, [cartItems])
 
     useEffect(() => {
         fetch('https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%201){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}',
@@ -29,7 +24,6 @@ export default function Catalog() {
     function handleAddToCart(newItem, newQuantity) {
         if (newQuantity > 0) {
             const existingItemIndex = cartItems.findIndex(item => {
-                console.log('item: ', item)
                 return item[0].node.id === newItem.node.id;
             });
             if (existingItemIndex !== -1) {
@@ -40,9 +34,7 @@ export default function Catalog() {
                 setCartItems([...cartItems, [newItem, newQuantity]]);
             }
         }
-        console.log("cartItems: ", cartItems)
     }
-
 
     return (
         <>

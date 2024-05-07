@@ -53,3 +53,85 @@
     text-decoration: none;
     color: #ffffff;
 }
+
+.smallViewPhotos {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+
+    .yogaPic,
+    .runnerPic {
+        width: 600px;
+    }
+
+    .yogaPic,
+    .sweatsuitPic {
+        height: 310px;
+    }
+
+    .sweatsuitPic,
+    .sneakersPic {
+        width: 241px;
+    }
+
+    .collectionTextContainer {
+        width: 841px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .topPhotosContainer,
+    .bottomPhotosContainer {
+        display: none;
+    }
+
+    .smallViewPhotos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sweatsuitPic,
+    .sneakersPic {
+        width: 241px;
+        height: 350px;
+    }
+
+    .yogaPic,
+    .runnerPic {
+        width: 482px;
+    }
+
+    .collectionText {
+        font-size: 1.25rem;
+    }
+
+    .collectionTextContainer {
+        width: 450px;
+    }
+}
+
+@media (max-width: 495px) {
+
+    .sweatsuitPic,
+    .sneakersPic {
+        width: 131px;
+        height: 220px;
+    }
+
+    .yogaPic,
+    .runnerPic {
+        width: 262px;
+        height: 220px;
+    }
+
+    .collectionText {
+        font-size: .8rem;
+    }
+
+    .collectionTextContainer {
+        width: 262px;
+        height: 20px;
+    }
+}

@@ -62,3 +62,42 @@
     align-self: flex-end;
     justify-self: flex-end;
 }
+
+@media (max-width: 625px) {
+    .cartItemContainer {
+        width: 320px;
+        height: 130px;
+        display: grid;
+        grid-template-columns: 130px 190px;
+        grid-template-rows: 130px 30px;
+        gap: 0;
+    }
+
+    .itemImage {
+        height: 130px;
+        width: 130px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .itemDetailsContainer {
+        width: 160px;
+    }
+
+    .itemDetails {
+        grid-row: 1 / 3;
+    }
+
+    .name {
+        font-size: 0.9rem;
+    }
+
+    .subtotal {
+        grid-column: 1 / 3;
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: .85rem;
+    }
+}

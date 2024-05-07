@@ -1,10 +1,11 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-import shoppingCartIcon from "../assets/shoppingCartG.png";
-import homeIcon from "../assets/homeG.png";
-import catalogIcon from "../assets/catalogG.png";
+import shoppingCartIcon from "../assets/shoppingCart.png";
+import homeIcon from "../assets/home.png";
+import catalogIcon from "../assets/catalog.png";
 import fernIcon from "../assets/fern.png";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 export default function NavBar({ totalQuantity }) {
     const [activePage, setActivePage] = useState('Home');
@@ -38,4 +39,8 @@ export default function NavBar({ totalQuantity }) {
             </div>
         </div>
     )
+}
+
+NavBar.propTypes = {
+    totalQuantity: PropTypes.number.isRequired
 }

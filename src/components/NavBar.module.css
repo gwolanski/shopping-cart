@@ -75,3 +75,37 @@
     border-radius: 15px;
     text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+    .headerContainer {
+        padding: 0 1.5rem;
+    }
+
+    .slogan {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .slogan {
+        display: none;
+    }
+
+    .navContainer {
+        width: 150px;
+    }
+
+    .contentContainer {
+        gap: 35px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .navIcon {
+        width: 30px;
+    }
+
+    .leftContainer {
+        max-width: 200px;
+    }
+}

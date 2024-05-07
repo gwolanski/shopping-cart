@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
-import styles from './ItemCard.module.css'
+import { useRef, useState } from 'react';
+import styles from './ItemCard.module.css';
+import PropTypes from 'prop-types';
 
 export default function ItemCard({ photoURL, itemName, price, onClick }) {
     const [quantity, setQuantity] = useState(0);
@@ -48,4 +49,11 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
             </div>
         </div>
     )
+}
+
+ItemCard.propTypes = {
+    photoURL: PropTypes.string.isRequired,
+    itemName: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
 }
