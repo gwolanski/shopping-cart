@@ -20,7 +20,16 @@ export default function CartItem({ photoURL, itemName, unitPrice, quantity, onCh
                         <div className={styles.name}>{itemName}</div>
                         <div className={styles.price}>${unitPrice} unit price</div>
                     </div>
-                    <input className={styles.quantityInput} type="number" name={itemName} id={itemName} value={quantity} onChange={handleQuantityChange} max={99} />
+                    <input
+                        className={styles.quantityInput}
+                        type="number"
+                        name={itemName}
+                        id={itemName}
+                        value={quantity}
+                        onChange={handleQuantityChange}
+                        max={99}
+                        data-testid={itemName + 'Quantity'}
+                    />
                     <div className={styles.subtotal}>Subtotal: ${unitPrice * quantity}</div>
                     <button className={styles.deleteBtn} onClick={handleItemDelete}>X</button>
                 </div>

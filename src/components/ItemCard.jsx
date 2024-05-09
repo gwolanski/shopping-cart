@@ -43,7 +43,9 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
                         defaultValue={0}
                         min={0}
                         max={99}
-                        ref={quantityInputRef} />
+                        ref={quantityInputRef}
+                        data-testid={itemName + 'Quantity'}
+                    />
                     <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
