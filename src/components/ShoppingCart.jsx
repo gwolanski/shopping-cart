@@ -62,7 +62,6 @@ export default function ShoppingCart() {
                     <div className={styles.total}>Total: ${grandTotal}</div>
                 </div>
             </div>
-
         </div>
     )
 }

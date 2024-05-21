@@ -22,17 +22,13 @@ export default function Home() {
             </div>
             <div className={styles.collectionTextContainer}>
                 <div className={styles.collectionText}>Check out our current collection
-                    <Link to='catalog' className={styles.link}> HERE</Link>
+                    <Link to='catalog' className={styles.link} data-testid='embeddedLink'> HERE</Link>
                 </div>
             </div>
             <div className={styles.bottomPhotosContainer}>
                 <img src={sneakersPic} alt="sneakers" className={styles.sneakersPic} />
                 <img src={runnerPic} alt="man running" className={styles.runnerPic} />
             </div>
-
-
-
         </div>
-
     )
 }

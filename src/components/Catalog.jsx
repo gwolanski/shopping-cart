@@ -38,7 +38,7 @@ export default function Catalog() {
 
     return (
         <>
-            <div className={styles.catalogContainer}>
+            <div className={styles.catalogContainer} data-testid='catalogContainer'>
                 <div className={styles.innerContainer}>
                     {products.map(product => (
                         <ItemCard

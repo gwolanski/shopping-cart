@@ -26,7 +26,7 @@ export default function ItemCard({ photoURL, itemName, price, onClick }) {
     }
 
     return (
-        <div className={styles.cardContainer}>
+        <div className={styles.cardContainer} data-testid={itemName}>
             <img className={styles.cardImage} src={photoURL} alt={itemName} />
             <div className={styles.bottomCard}>
                 <div className={styles.itemSpecifics}>

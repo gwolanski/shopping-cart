@@ -33,7 +33,7 @@ export default function NavBar({ totalQuantity }) {
                     </Link>
                     <Link to='shoppingCart' className={activePage === 'ShoppingCart' ? styles.currentPage : ''} onClick={() => handleSetActivePage('ShoppingCart')}>
                         <img className={styles.navIcon} src={shoppingCartIcon} alt="shopping cart" />
-                        <div className={styles.itemNumber}>{totalQuantity}</div>
+                        <div className={styles.itemNumber} data-testid='linkQuantity'>{totalQuantity}</div>
                     </Link>
                 </div>
             </div>

@@ -30,7 +30,6 @@ const App = () => {
       <div className="footerContainer">
         <Footer />
       </div>
-
     </>
   )
 }
