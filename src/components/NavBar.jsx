@@ -1,8 +1,8 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-import shoppingCartIcon from "../assets/shoppingCart.png";
-import homeIcon from "../assets/home.png";
-import catalogIcon from "../assets/catalog.png";
+//import shoppingCartIcon from "../../public/shoppingCart.png";
+// import homeIcon from "../assets/home.png";
+// import catalogIcon from "../assets/catalog.png";
 import fernIcon from "../assets/fern.png";
 import { useState } from "react";
 import PropTypes from 'prop-types';
@@ -26,13 +26,13 @@ export default function NavBar({ totalQuantity }) {
                 </div>
                 <div className={styles.navContainer}>
                     <Link to='/' className={activePage === 'Home' ? styles.currentPage : ''} onClick={() => handleSetActivePage('Home')}>
-                        <img className={styles.navIcon} src={homeIcon} alt="home" />
+                        <img className={styles.navIcon} src="/home.png" alt="home" />
                     </Link>
                     <Link to='catalog' className={activePage === 'Catalog' ? styles.currentPage : ''} onClick={() => handleSetActivePage('Catalog')}>
-                        <img className={styles.navIcon} src={catalogIcon} alt="catalog" />
+                        <img className={styles.navIcon} src="/catalog.png" alt="catalog" />
                     </Link>
                     <Link to='shoppingCart' className={activePage === 'ShoppingCart' ? styles.currentPage : ''} onClick={() => handleSetActivePage('ShoppingCart')}>
-                        <img className={styles.navIcon} src={shoppingCartIcon} alt="shopping cart" />
+                        <img className={styles.navIcon} src="/shoppingCart.png" alt="shopping cart" />
                         <div className={styles.itemNumber} data-testid='linkQuantity'>{totalQuantity}</div>
                     </Link>
                 </div>
