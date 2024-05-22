@@ -4,4 +4,4 @@ This project allowed me to continue practicing some previously learned concepts 
 
 I really enjoy projects like this where I get to flex my creativity in a relatable scenario while reinforcing many of the concepts I've learned so far throughout my coding journey. 
 
-Link to page:
+Link to page: https://flo-shopping-cart.netlify.app/
