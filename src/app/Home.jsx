@@ -1,8 +1,8 @@
-import styles from './Home.module.css';
-import yogaPic from './assets/yoga.jpg';
-import sweatsuitPic from './assets/sweatpants.jpg';
-import runnerPic from './assets/runner.jpg';
-import sneakersPic from './assets/sneakers.jpg';
+import styles from './styles/Home.module.css';
+import yogaPic from '../assets/yoga.jpg';
+import sweatsuitPic from '../assets/sweatpants.jpg';
+import runnerPic from '../assets/runner.jpg';
+import sneakersPic from '../assets/sneakers.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Home() {

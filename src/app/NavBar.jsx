@@ -1,4 +1,4 @@
-import styles from "./NavBar.module.css";
+import styles from "./styles/NavBar.module.css";
 import { Link } from "react-router-dom";
 //import shoppingCartIcon from "../../public/shoppingCart.png";
 // import homeIcon from "../assets/home.png";

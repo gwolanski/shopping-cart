@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import ItemCard from "./ItemCard";
-import styles from "./Catalog.module.css";
+import ItemCard from "../components/ItemCard";
+import styles from "./styles/Catalog.module.css";
 import { useOutletContext } from "react-router-dom";
 
 export default function Catalog() {

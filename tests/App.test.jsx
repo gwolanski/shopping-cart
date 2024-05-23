@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, fireEvent, waitFor, screen, within } from '@testing-library/react';
-import App from '../src/App';
+import App from '../src/app/App';
 import { BrowserRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
 import routes from '../src/routes';
 
