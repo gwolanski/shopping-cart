@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
-import './styles/App.css'
-import Footer from './Footer'
-import NavBar from './NavBar'
-import { Outlet } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import './styles/App.css';
+import Footer from './Footer';
+import NavBar from './NavBar';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -16,8 +16,7 @@ const App = () => {
       });
     }
     setTotalQuantity(newQuantity);
-  });
-
+  }, [cartItems]);
 
   return (
     <>
