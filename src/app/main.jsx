@@ -10,20 +10,16 @@ import ShoppingCart from "./ShoppingCart";
 
 // const router = createBrowserRouter(routes);
 
-const Main = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="catalog" element={<Catalog />} />
-        <Route path="shoppingCart" element={<ShoppingCart />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Main />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="shoppingCart" element={<ShoppingCart />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 )
