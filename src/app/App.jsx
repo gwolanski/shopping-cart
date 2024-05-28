@@ -24,6 +24,7 @@ const App = () => {
         <NavBar totalQuantity={totalQuantity} />
       </div>
       <div className="contentContainer">
+        <h1>mersman</h1>
         <Outlet context={[cartItems, setCartItems]} />
       </div>
       <div className="footerContainer">
