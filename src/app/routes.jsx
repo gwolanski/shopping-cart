@@ -9,7 +9,8 @@ const routes = [
         element: <App />,
         children: [
             {
-                index: true,
+                // index: true,
+                path: '',
                 element: <Home />
             },
             {
