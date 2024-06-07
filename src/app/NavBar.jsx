@@ -1,15 +1,9 @@
 import styles from "./styles/NavBar.module.css";
 import { Link } from "react-router-dom";
 import fernIcon from "../assets/fern.png";
-import { useState } from "react";
 import PropTypes from 'prop-types';
 
 export default function NavBar({ totalQuantity }) {
-    const [activePage, setActivePage] = useState('Home');
-
-    const handleSetActivePage = (pageName) => {
-        setActivePage(pageName);
-    }
 
     return (
         <div className={styles.headerContainer}>
@@ -22,13 +16,13 @@ export default function NavBar({ totalQuantity }) {
                     <div className={styles.slogan}>Activewear designed to fit your lifestyle.</div>
                 </div>
                 <div className={styles.navContainer}>
-                    <Link to='/' className={activePage === 'Home' ? styles.currentPage : ''} onClick={() => handleSetActivePage('Home')}>
+                    <Link to='/'>
                         <img className={styles.navIcon} src="/home.png" alt="home" />
                     </Link>
-                    <Link to='catalog' className={activePage === 'Catalog' ? styles.currentPage : ''} onClick={() => handleSetActivePage('Catalog')}>
+                    <Link to='catalog'>
                         <img className={styles.navIcon} src="/catalog.png" alt="catalog" />
                     </Link>
-                    <Link to='cart' className={activePage === 'ShoppingCart' ? styles.currentPage : ''} onClick={() => handleSetActivePage('ShoppingCart')}>
+                    <Link to='cart'>
                         <img className={styles.navIcon} src="/shoppingCart.png" alt="shopping cart" />
                         <div className={styles.itemNumber} data-testid='linkQuantity'>{totalQuantity}</div>
                     </Link>
