@@ -1,8 +1,5 @@
 import styles from "./styles/NavBar.module.css";
 import { Link } from "react-router-dom";
-//import shoppingCartIcon from "../../public/shoppingCart.png";
-// import homeIcon from "../assets/home.png";
-// import catalogIcon from "../assets/catalog.png";
 import fernIcon from "../assets/fern.png";
 import { useState } from "react";
 import PropTypes from 'prop-types';
@@ -31,7 +28,7 @@ export default function NavBar({ totalQuantity }) {
                     <Link to='catalog' className={activePage === 'Catalog' ? styles.currentPage : ''} onClick={() => handleSetActivePage('Catalog')}>
                         <img className={styles.navIcon} src="/catalog.png" alt="catalog" />
                     </Link>
-                    <Link to='shoppingCart' className={activePage === 'ShoppingCart' ? styles.currentPage : ''} onClick={() => handleSetActivePage('ShoppingCart')}>
+                    <Link to='cart' className={activePage === 'ShoppingCart' ? styles.currentPage : ''} onClick={() => handleSetActivePage('ShoppingCart')}>
                         <img className={styles.navIcon} src="/shoppingCart.png" alt="shopping cart" />
                         <div className={styles.itemNumber} data-testid='linkQuantity'>{totalQuantity}</div>
                     </Link>
